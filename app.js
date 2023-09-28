@@ -3,13 +3,15 @@ const heroes = [
         name: 'Slate',
         type: 'dwarf',
         damage: 5,
-        health: 100
+        health: 100,
+        maxHealth: 100
     },
     {
         name: 'Flint',
         type: 'elf',
         damage: 10,
-        health: 50
+        health: 50,
+        maxHealth: 50
     }
 ]
 
@@ -77,13 +79,21 @@ function bossDrops(){
 function drawHeroStats(){
     heroes.forEach(hero => {
         const heroElement = document.getElementById(hero.name)
-
         heroElement.innerHTML = `<p>${hero.name}<p>
         <p>HP ${hero.health}<p>
         <p>Damage ${hero.damage}<p>
         <p>Type ${hero.type}<p>`
     })
 }
+
+function healHero(heroName){
+    const foundHero = heroes.find(hero => hero.name == heroName)
+    foundHero.health = foundHero.maxHealth
+    drawHeroStats()
+    }
+
+
+
 
 
 drawHeroStats()
