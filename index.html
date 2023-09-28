@@ -16,25 +16,23 @@
                     <p class="fs-4">Slate</p>
                 <img class="image-fluid" src="https://th.bing.com/th/id/OIP.-W4pKhwi-t-2LDwLkLlmmQHaIA?w=156&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
                 </div>
-                <p>Health:<span id="hp">100</span></p>
-                <p>damage 5</p>
-                <p>level 1</p>
+                <p id="Slate"></p>
             </div>
             <div class="col-3 herobutton">
                 <div class="d-flex justify-content-between mt-2">
                     <p class="fs-4">Flint</p>
                 <img class="image-fluid" src="https://th.bing.com/th/id/OIP.g_8mr7nOPLI2qPV_UDlK6QAAAA?w=166&h=212&c=7&r=0&o=5&dpr=1.3&pid=1.7">
                 </div>
-                <p>Health:<span id="hp">50</span></p>
-                <p>damage 10</p>
-                <p>level 1</p>
+                <p id="Flint"></p>
             </div>
         </div>
     </header>
     <main class="container-fluid">
         <div class="row d-flex justify-content-center mb-3 p-3">
             <div class="col-8 boss text-center" function="button" onclick="attackBoss()">
-                <p><span id="boss">100</span>%</p>
+                <p>Hp <span id="boss">100</span></p>
+                <p>Level<span id="bosslevel"></span></p>
+                <p>Monsters Slain: <span id="deadBosses"></span></p>
                 <h2>Boss</h2>
                 <img class="image-fluid p-3" src="https://images.unsplash.com/photo-1567210590635-06998f86961e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BpZGVyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60">
             </div>
@@ -44,14 +42,9 @@
         <div class="row d-flex justify-content-between mb-3 p-3">
             <div class="col-5 herobutton">
                 <div class="row">
-                    <div class="col-6"><button class="btn">Buy</button></div>
-                    <div class="col-6"><p>Price</p></div>
-                </div>
-                <div class="row">
-                    <div class="col-6"><button class="btn">Buy</button></div>
-                    <div class="col-6"><p>Price</p></div>
-                </div>
-                <div class="row">
+                    <div class="col-12">
+                        <h3 class="text-center">Current Gold: <span id="gold"></span></h3>
+                    </div>
                     <div class="col-6"><button class="btn">Buy</button></div>
                     <div class="col-6"><p>Price</p></div>
                 </div>
