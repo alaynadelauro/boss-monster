@@ -54,6 +54,7 @@ function bossAttack(){
         hero.health -= boss.damage
         if(hero.health <= 0){hero.health = 0}
         console.log(hero.health)
+        killHeroes()
         drawHeroStats()
     })
 }
@@ -87,13 +88,20 @@ function drawHeroStats(){
 }
 
 function healHero(heroName){
+    if(gold >= 25){
     const foundHero = heroes.find(hero => hero.name == heroName)
     foundHero.health = foundHero.maxHealth
-    drawHeroStats()
+    drawHeroStats()}
+    if(foundhero.health <= 0){return}
+    gold -= 25
+    drawGold()
+}
+
+function killHeroes(){
+    if(heroes.health <= 0){
+        hero.damage = 0
     }
-
-
-
+}
 
 
 drawHeroStats()
